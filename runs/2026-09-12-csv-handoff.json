@@ -1,0 +1,23 @@
+{
+  "trace_id": "handoff-2026-09-12-csv-001",
+  "generated": "2026-09-12T07:02:10Z",
+  "event": "research-to-eda-csv-handoff",
+  "request": "eda-nikos/requests/2026-09-12-papers-csv.json",
+  "owner": {
+    "bench": "research-irene",
+    "path": "research-irene/data/papers.csv",
+    "sha256": "b93157a5ece20065037c542b88aa9f3bb384493189e6b86e1f9d4cb6c70807df"
+  },
+  "consumer": {
+    "bench": "eda-nikos",
+    "report": "eda-nikos/reports/sample-study.json",
+    "figure": "eda-nikos/figures/citations-by-year.svg"
+  },
+  "checks": {
+    "source_exists": true,
+    "digest_matches_consumer_report": true,
+    "consumer_keeps_source_in_research": true,
+    "audit_trace_saved": true
+  },
+  "result": "passed"
+}

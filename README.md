@@ -9,6 +9,8 @@ truth.
 - `checks/` contains executable checks and their small reports.
 - `runs/` contains dated audit outputs with the commit they inspected.
 - `manifests/` contains SHA-256 pins and source metadata.
+- `runs/` also preserves cross-bench handoff traces, including requester,
+  owner, source digest, consumer, and verification result.
 - Audit may report another project; it does not edit that project's files.
 
 ## First run
