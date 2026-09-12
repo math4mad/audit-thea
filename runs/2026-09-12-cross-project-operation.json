@@ -1,0 +1,31 @@
+{
+  "trace_id": "cross-project-2026-09-12-001",
+  "generated": "2026-09-12T07:23:31.890520+00:00",
+  "operation": "Research publishes CSV -> EDA consumes CSV -> Audit verifies trace",
+  "steps": [
+    {
+      "project": "research-irene",
+      "action": "publish",
+      "path": "research-irene/data/papers.csv",
+      "sha256": "b93157a5ece20065037c542b88aa9f3bb384493189e6b86e1f9d4cb6c70807df"
+    },
+    {
+      "project": "eda-nikos",
+      "action": "consume",
+      "path": "eda-nikos/reports/sample-study.json",
+      "input_sha256": "b93157a5ece20065037c542b88aa9f3bb384493189e6b86e1f9d4cb6c70807df"
+    },
+    {
+      "project": "audit-thea",
+      "action": "verify",
+      "path": "audit-thea/runs/2026-09-12-cross-project-operation.json"
+    }
+  ],
+  "checks": {
+    "research_published_csv": true,
+    "eda_consumed_same_digest": true,
+    "eda_report_exists": true,
+    "audit_owns_trace": true
+  },
+  "result": "passed"
+}
